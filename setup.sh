@@ -29,7 +29,7 @@ rm -rf yay
 sudo pacman -S --needed --noconfirm android-tools bleachbit cmatrix eza firefox flatpak fwupd gamemode hwinfo inxi lolcat net-tools neofetch noto-fonts noto-fonts-extra ntfs-3g openssh os-prober pacman-contrib qbittorrent rsync samba sl speedtest-cli sshfs ttf-liberation ufw unrar vlc zsh
 
 # Install Programs
-sudo pacman -S --needed --noconfirm corectrl discord filezilla gimp lutris telegram-desktop wine-staging
+sudo pacman -S --needed --noconfirm corectrl discord filezilla gimp libreoffice-fresh lutris telegram-desktop wine-staging
 
 # Install Steam
 sudo pacman -S steam
