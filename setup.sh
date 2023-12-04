@@ -26,7 +26,7 @@ cd ..
 rm -rf yay
 
 # Install Essential Programs
-sudo pacman -S --needed --noconfirm android-tools bleachbit cmatrix eza firefox flatpak fwupd gamemode hwinfo inxi lolcat net-tools neofetch noto-fonts noto-fonts-extra ntfs-3g openssh os-prober pacman-contrib rsync samba sl speedtest-cli sshfs ttf-liberation ufw unrar vlc zsh
+sudo pacman -S --needed --noconfirm android-tools bleachbit cmatrix eza firefox flatpak fwupd gamemode hwinfo inxi lolcat net-tools neofetch noto-fonts noto-fonts-extra ntfs-3g openssh os-prober pacman-contrib qbittorrent rsync samba sl speedtest-cli sshfs ttf-liberation ufw unrar vlc zsh
 
 # Install Programs
 sudo pacman -S --needed --noconfirm corectrl discord filezilla gimp kdenlive lutris obs-studio telegram-desktop wine-staging
@@ -38,7 +38,7 @@ sudo pacman -S steam
 flatpak install --assumeyes flathub net.davidotek.pupgui2
 
 # Install KDE Plasma Packages
-sudo pacman -S --needed --noconfirm ark spectacle kdeconnect gwenview kvantum packagekit-qt5 qbittorrent
+sudo pacman -S --needed --noconfirm ark spectacle kdeconnect gwenview kvantum packagekit-qt5
 
 # Install Oh-My-ZSH and ZSH Plugins, move .zshrc
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -65,13 +65,14 @@ sudo locale-gen
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
-# Enable Uncomplicated Firewall (UFW) and allow SSH traffic
+# Enable Uncomplicated Firewall (UFW) and allow SSH traffic and KDE Connect
 sudo systemctl enable ufw
 sudo systemctl enable ufw.service
 sudo systemctl start ufw.service
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp   # Allow SSH traffic on port 22
+sudo ufw allow 1716/tcp # Allow KDE Connect on port 1716
 sudo ufw --force enable  # Enable UFW and reload rules
 
 # Start and Enable SSH
@@ -81,6 +82,10 @@ sudo systemctl start sshd
 # Enable Paccache
 sudo systemctl enable paccache.timer
 sudo systemctl start paccache.timer
+
+# Enable Reflector
+sudo systemctl enable --now reflector.service reflector.timer
+sudo systemctl start reflector.service reflector.timer
 
 # Enable Teamviewer
 sudo systemctl enable teamviewerd.service
