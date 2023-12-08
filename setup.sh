@@ -38,7 +38,7 @@ sudo pacman -S steam
 flatpak install --assumeyes flathub net.davidotek.pupgui2
 
 # Install KDE Plasma Packages
-sudo pacman -S --needed --noconfirm ark spectacle kdeconnect gwenview kvantum packagekit-qt5
+sudo pacman -S --needed --noconfirm ark spectacle kdeconnect gwenview kvantum okular packagekit-qt5
 
 # Install Oh-My-ZSH and ZSH Plugins, move .zshrc
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
