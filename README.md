@@ -10,7 +10,7 @@ This Bash script automates the initial setup process for an Arch Linux system. I
 ### 2. Installation of Essential Programs
 - Installs crucial utilities and tools.
 - Adds KDE Plasma packages, essential for KDE users.
-- Sets up Flatpak and AUR repositories.
+- Sets up AUR repositories.
 
 ### 3. Additional Software Installation
 - Installs programs like Discord, GIMP, Steam, etc.
