@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 
 #Update System
 alias sync='sudo pacman -Syyy'
-alias update='sudo pacman -Syyu && yay -Syyu &&'
+alias update='sudo pacman -Syyu && yay -Syyu'
 
 #Update Mirrorlist
 alias mirrorlist='sudo reflector --verbose --latest 10 --country Greece --protocol https,http --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyy'
