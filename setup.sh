@@ -50,7 +50,7 @@ sleep 5  # Wait for 5 seconds
 mv /home/$USER/archlinux/.zshrc /home/$USER/
 
 # Install AUR Programs
-yay -S --needed --noconfirm dropbox heroic-games-launcher-bin lact openrgb-bin pamac-aur pince protonup-qt spotify stacer stremio teamviewer
+yay -S --needed --noconfirm dropbox heroic-games-launcher-bin lact openrgb-bin pamac-aur protonup-qt spotify stacer stremio teamviewer
 
 # Uncomment el_GR.UTF-8 in locale.gen
 sudo sed -i 's/#el_GR.UTF-8 UTF-8/el_GR.UTF-8 UTF-8/' /etc/locale.gen
