@@ -2,7 +2,7 @@
 
 # Update Mirrorlist
 sudo pacman -S --needed --noconfirm reflector rsync
-sudo reflector --verbose --latest 10 --country Greece --protocol https,http --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyy
+sudo reflector --verbose --latest 10 --protocol https,http --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyy
 
 # Update System
 sudo pacman -Syu --noconfirm
