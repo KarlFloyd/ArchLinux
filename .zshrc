@@ -107,7 +107,8 @@ alias sync='sudo pacman -Syyy'
 alias update='sudo pacman -Syyu && yay -Syyu'
 
 #Update Mirrorlist
-alias mirrorlist='sudo reflector --verbose --latest 10 --country Greece --protocol https,http --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyy'
+alias mirror='sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyy'
+alias mirrorlist='sudo reflector --verbose --latest 5 --country Greece --protocol https,http --sort rate --save /etc/pacman.d/mirrorlist && sudo pacman -Syyy'
 
 #Change LS with EXA
 alias ls='eza -al --color=always --group-directories-first --icons'
