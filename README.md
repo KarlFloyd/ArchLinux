@@ -4,8 +4,8 @@ This Bash script automates the setup process for an Arch Linux system, saving ti
 Usage
 
     Run the Script:
-        Make the script executable if needed: chmod +x script_name.sh
-        Execute the script with elevated privileges: sudo ./script_name.sh
+        Make the script executable if needed: chmod +x setup.sh
+        Execute the script with elevated privileges: sudo ./setup.sh
 
     Script Workflow:
 
