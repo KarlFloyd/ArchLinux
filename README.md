@@ -1,28 +1,65 @@
 ## Arch Linux System Setup Script
 
-This Bash script automates the initial setup process for an Arch Linux system. It handles:
+This Bash script automates the setup process for an Arch Linux system, saving time by handling essential configurations, installations, and service enablement.
+Usage
 
-### 1. Updates & Configurations
-- Updates mirrorlists and the system.
-- Configures Pacman preferences in `pacman.conf`.
-- Enables Bluetooth, SSH, and sets up the Uncomplicated Firewall (UFW) for specific traffic.
+    Run the Script:
+        Make the script executable if needed: chmod +x script_name.sh
+        Execute the script with elevated privileges: sudo ./script_name.sh
 
-### 2. Installation of Essential Programs
-- Installs crucial utilities and tools.
-- Adds KDE Plasma packages, essential for KDE users.
-- Sets up AUR repositories.
+    Script Workflow:
 
-### 3. Additional Software Installation
-- Installs programs like Discord, GIMP, Steam, etc.
-- Configures Oh-My-ZSH and necessary plugins.
+        Mirrorlist Update:
+            Refreshes the mirrorlist for package updates.
 
-### 4. Miscellaneous Tasks
-- Generates locales, cleans up caches, and sets up various services (TeamViewer, Reflector, Paccache).
+        System Update:
+            Updates the system packages without confirmation prompts.
 
-### Usage
-- Run `./setup.sh` in a terminal.
-- Review and understand the script's actions before execution.
+        Pacman Configuration Modifications:
+            Modifies pacman.conf by uncommenting color options, setting download parallelism, and adding preferences for a better package management experience.
 
-### Disclaimer
-- Use with caution; understand the commands before running.
-- Modify the script according to your preferences.
+        YAY Installation:
+            Installs YAY, an AUR helper, facilitating easy AUR package installations.
+
+        Essential and Additional Program Installation:
+            Installs essential system tools and a selection of commonly used programs.
+
+        KDE Plasma Packages and Steam Installation:
+            Installs KDE Plasma packages and Steam gaming platform.
+
+        Oh-My-ZSH Setup:
+            Installs Oh-My-ZSH and associated plugins for enhanced ZSH shell experience.
+
+        AUR Package Installation:
+            Installs additional AUR packages using YAY.
+
+        Locale Configuration and Bluetooth/Network Setup:
+            Configures locales and enables Bluetooth and firewall settings.
+
+        Service Enabling:
+            Enables various services like SSH, Paccache, KDE Connect, Reflector, and Teamviewer.
+
+        Cleanup:
+            Removes orphaned files, cleans caches, and performs system cleanup tasks.
+
+        Reboot:
+            Provides an option to reboot the system immediately or wait for an automatic reboot.
+
+## Important Notes
+
+    Proceed with Caution:
+        Review the script content before execution. Some commands modify system configurations and settings.
+
+    Customization:
+        Modify the script to suit personal preferences or add/remove packages as required.
+
+    Post-Setup Checks:
+        After script execution, review configurations and ensure desired installations were successful.
+
+## Caution
+
+    Backup:
+        It's advisable to back up important data before executing system-wide changes or installations.
+
+    User Interaction:
+        Certain steps might require user confirmation or interaction during script execution.
