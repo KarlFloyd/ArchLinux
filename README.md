@@ -17,7 +17,7 @@ This Bash script automates the initial setup process for an Arch Linux system. I
 - Configures Oh-My-ZSH and necessary plugins.
 
 ### 4. Miscellaneous Tasks
-- Generates locales, cleans up caches, and sets up various services (TeamViewer, LACT, Paccache).
+- Generates locales, cleans up caches, and sets up various services (TeamViewer, Reflector, Paccache).
 
 ### Usage
 - Run `./setup.sh` in a terminal.
