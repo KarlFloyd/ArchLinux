@@ -26,7 +26,7 @@ cd ..
 rm -rf yay
 
 # Install Essential Programs
-sudo pacman -S --needed --noconfirm android-tools bleachbit cmatrix eza firefox fwupd gamemode hwinfo inxi lolcat net-tools neofetch noto-fonts noto-fonts-extra ntfs-3g openssh os-prober pacman-contrib qbittorrent rsync samba sl speedtest-cli sshfs ttf-liberation ufw unrar vlc zsh
+sudo pacman -S --needed --noconfirm android-tools bleachbit cmatrix eza firefox fwupd gamemode hwinfo inxi lolcat net-tools neofetch noto-fonts noto-fonts-extra ntfs-3g openssh pacman-contrib qbittorrent rsync samba sl speedtest-cli sshfs ttf-liberation ufw unrar vlc zsh
 
 # Install Programs
 sudo pacman -S --needed --noconfirm corectrl discord filezilla gimp libreoffice-fresh lutris telegram-desktop wine-staging
@@ -50,7 +50,7 @@ sleep 5  # Wait for 5 seconds
 mv /home/$USER/archlinux/.zshrc /home/$USER/
 
 # Install AUR Programs
-yay -S --needed --noconfirm dropbox heroic-games-launcher-bin lact openrgb-bin pamac-aur protonup-qt spotify stacer stremio teamviewer
+yay -S --needed --noconfirm dropbox heroic-games-launcher-bin pamac-aur protonup-qt spotify stacer stremio teamviewer
 
 # Uncomment el_GR.UTF-8 in locale.gen
 sudo sed -i 's/#el_GR.UTF-8 UTF-8/el_GR.UTF-8 UTF-8/' /etc/locale.gen
@@ -87,9 +87,6 @@ sudo systemctl start reflector.service reflector.timer
 # Enable Teamviewer
 sudo systemctl enable teamviewerd.service
 sudo systemctl start teamviewerd.service
-
-# Enable LACT
-sudo systemctl enable --now lactd
 
 # Clean up orphaned files and caches
 sudo pacman -Rns $(pacman -Qtdq) --noconfirm
