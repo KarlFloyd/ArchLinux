@@ -69,7 +69,8 @@ sudo systemctl start ufw.service
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp   # Allow SSH traffic on port 22
-sudo ufw allow 1716/tcp # Allow KDE Connect on port 1716
+sudo ufw allow 1714:1764/tcp # Allow KDE Connect
+sudo ufw allow 1714:1764/udp # Allow KDE Connect
 sudo ufw --force enable  # Enable UFW and reload rules
 
 # Start and Enable SSH
